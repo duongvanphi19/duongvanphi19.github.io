@@ -1,13 +1,47 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="author" content="duongvanphi19">
-        <title>IHP</title>
-    </head>
-    <body>
-        <h1>Hello, I am <b>Duong Van Phi</b></h1>
-    </body>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <title>DictApi</title>
+</head>
+<body>
+
+    <nav class="navbar mb-5">
+        <div class="container-fluid">
+            <div class="navbar-brand">
+                DictApi
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="search input-group my">
+            <input type="text" class="search-input form-control" value="" list="searchSuggestions" placeholder="Search a word" />
+            <datalist id="searchSuggestions">
+
+            </datalist>
+            <button id="searchBtn" class="btn btn-secondary" type="submit">Search</button>
+        </div>
+        <div class="content">
+            <div class="my-4">
+                <h1 class="h1 mt-5 m-b3 word-title fw-bold"></h1>
+                <h5 class="phonetic text-muted"></h5>
+            </div>
+
+            <div class="meanings">
+
+            </div>
+            <code>
+                <pre class="data">
+
+                </pre>
+            </code>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+
+</body>
 </html>
