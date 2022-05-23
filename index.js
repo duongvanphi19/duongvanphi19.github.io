@@ -94,10 +94,11 @@ window.onload = () => {
             if (word.trim() === "") {
                 return;
             }
-            let data = await searchAWord(word.trim());
             $(".word-title").textContent = "";
             $(".meanings").textContent = "Loading...";
             $(".phonetic").textContent = "";
+            let data = await searchAWord(word.trim());
+            
 
 console.log("data", data);
             try {
