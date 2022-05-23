@@ -95,14 +95,16 @@ window.onload = () => {
                 return;
             }
             let data = await searchAWord(word.trim());
-            console.log("data", data);
+            $(".word-title").textContent = "";
+            $(".meanings").textContent = "Loading...";
+            $(".phonetic").textContent = "";
+
+console.log("data", data);
             try {
                 renderMeanings(data[0]);
             }catch(error) {
                 $(".word-title").textContent = data.title;
-                $(".meanings").textContent = "";
-                $(".phonetic").textContent = "";
-
+ 
             }finally {
                 //$(".data").textContent = JSON.stringify(data, null, 2);
             }
