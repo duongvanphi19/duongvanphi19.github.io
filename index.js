@@ -58,7 +58,7 @@ const renderMeanings = data => {
     const renderDefinition = data => {
         return data.map((d, i) => {
             const example = renderExamples(d) || "";
-            return `<li class="my-3 list-group-item"><strong class="lead">${d.definition}</strong>
+            return `<li class="my-3"><strong class="">${d.definition}</strong>
             ${example}
             </li>`;
         }).join("\n");
@@ -71,7 +71,7 @@ const renderMeanings = data => {
         const pOS = renderDefinition(i.definitions);
         const item = `<div class="partOfSpeech my-5">
         <p class="h5"><em>${i.partOfSpeech}</em></p>
-        <ul class="list-group">
+        <ul class="">
         ${pOS}
         </ul>
         </div>`;
@@ -94,18 +94,16 @@ window.onload = () => {
             if (word.trim() === "") {
                 return;
             }
-            $(".word-title").textContent = "";
             $(".meanings").textContent = "Loading...";
+            $(".word-title").textContent = "";
             $(".phonetic").textContent = "";
             let data = await searchAWord(word.trim());
-            
-
-console.log("data", data);
+            console.log("data", data);
             try {
                 renderMeanings(data[0]);
             }catch(error) {
                 $(".word-title").textContent = data.title;
- 
+
             }finally {
                 //$(".data").textContent = JSON.stringify(data, null, 2);
             }
