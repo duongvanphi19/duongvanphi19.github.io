@@ -82,6 +82,7 @@ const renderMeanings = data => {
 };
 
 window.onload = () => {
+    
     //localStorage.removeItem("suggestions");
     $(".search-input").addEventListener("focus",
         addSuggestionsHTML);
@@ -108,4 +109,9 @@ window.onload = () => {
                 //$(".data").textContent = JSON.stringify(data, null, 2);
             }
         });
+    document.addEventListener("keypress", function(event) {
+  if (event.keyCode == 13 || event.which == 13) {
+    $("#searchBtn").click();
+  }
+});
 }
